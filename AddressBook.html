@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Address Book</title>
+    <link href="./AddressBook.css" rel="stylesheet" type="text/css"></link>
+    
+
+  </head>
+
+  <body>
+
+    <h1>Address Book</h1>
+
+    <!--- search bar --->
+        <div id="searchArea">
+            <h2>Search for an existing contact</h2>
+            <form action="" method="GET" id="searchBar" onsubmit="return false">
+                <input type="text" name="search" id="search" placeholder="search for a contact" required>
+                <button class="searchButton">Search!</button>
+            </form>
+        </div>
+
+    
+
+    <!--- button to add a new contact-->
+    <div id='addNewContact' class="add new contact">
+        <h2>Add a new contact</h2>
+        <!--- form to add a new contact. Starts off hidden, is made visible on click above-->
+        <button id="showNewContactForm">Add a new contact</button>
+        
+        <form class="hide" action="" method="GET" id="newContactForm">
+            <label for="firstName">First name:</label>
+            <input type="text" name="firstName" id="firstName" placeholder="John" required> <br>
+            <label for="surname">Surname:</label>
+            <input type="text" name="surname" id="surname" placeholder="Smith" required> <br>
+            <label for="phoneNumber">Phone number:</label>
+            <input type="tel" name="phoneNumber" id="phoneNumber"> <br>
+            <label for="addressLine1">Address line 1:</label>
+            <input type="text" name="addressLine1" id="addressLine1"> <br>
+            <label for="addressLine2">Address line 2:</label>
+            <input type="text" name="addressLine2" id="addressLine2"> <br>
+            <label for="postCode">Post code:</label>
+            <input type="text" name="postCode" id="postCode"> <br>
+            <input type="submit" value="Enter contact" onclick="submitNewContact(event)">            
+        </form>
+    </div>
+ 
+    
+    <!--- list of existing contacts. If you click on a contact, brings up options to edit details or to delete --->
+    <!--- NB The exist-->
+    <div class="existing contacts">
+        <h2>Click on a contact to see their details or to delete the contact</h2>
+        <ul id="existingContactsList" class="selectable">           
+        </ul>
+
+        <p class="hide contactDisplay" id="displayName">Name</p>
+        <p class="hide contactDisplay" id="displayPhoneNumber">Phone number</p>
+        <p class="hide contactDisplay" id="displayAddress1">Address</p>
+        <p class="hide contactDisplay" id="displayPostCode"></p>
+        <button class="hide contactDisplay deleteContactButton">Delete contact</button>
+
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./AddressBook2.js"></script>
+
+  </body>
+
+</html>
