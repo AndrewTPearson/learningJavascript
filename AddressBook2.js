@@ -63,6 +63,8 @@ function submitNewContact(event) {
     const tempPostCode = document.getElementById("postCode").value;
     listOfContacts[listOfContacts.length] = new contact(tempFirstName, tempSurname, tempPhoneNumber, tempAddressLine1, tempAddressLine2, tempPostCode);
     updateContactsList();
+    let temp = $("#newContactForm");
+    temp.addClass('hide');
 }
 function displayContact(contact) {
     displayedContact = contact;
