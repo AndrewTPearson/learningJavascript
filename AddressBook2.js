@@ -118,17 +118,17 @@ updateContactsList();
 
 // For testing purposes
 listOfContacts[0] = Dummy = new contact('Dummy', 'MacDummyson', '3456', '1 Dumb Lane', 'Dumberwell', 'SE21');
-listOfContacts[1] = Andrew = new contact('Andrew', 'Pearson', '0123', 'Lewisham', 'London', 'SE13');
-listOfContacts[2] = Anu = new contact('Anuoluwapo', 'Oloruntola', '1234', 'Lee', 'London', 'SE12');
-listOfContacts[3] = Chris = new contact('Christopher', "Pearson", '2345', 'Kings Norton', 'Birmingham', 'B30 1DL');
-function addRob() {
-    Rob = new contact('Robert', 'Oliver', '4567', 'Lewisham', 'London', 'SE13');
-    listOfContacts.push(Rob);
+listOfContacts[1] = Andrew = new contact('Andrew', 'Pearson', '0123', 'Lewis', 'London', 'SE13');
+listOfContacts[2] = Alice = new contact('Alice', 'Olor', '1234', 'Ladywell', 'London', 'SE12');
+listOfContacts[3] = James = new contact('James', "Pearson", '2345', 'Kings', 'Birmingham', 'B30');
+function addSarah() {
+    Sarah = new contact('Sarah', 'Turner', '4567', 'Lewis', 'London', 'SE13');
+    listOfContacts.push(Sarah);
     updateContactsList();
 }
-function addIfe() {
-    Ife = new contact('Ifeoluwa', 'Oloruntola', '5678', 'Lewisham', 'London', 'SE14');
-    listOfContacts.push(Ife);
+function addJim() {
+    Jim = new contact('Jim', 'Olor', '5678', 'Lewis', 'London', 'SE20');
+    listOfContacts.push(Jim);
     updateContactsList();
 }
 updateContactsList();
